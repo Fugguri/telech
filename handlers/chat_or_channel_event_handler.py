@@ -11,6 +11,6 @@ async def some_handler(chat_member: types.ChatMemberUpdated):
     username = chat_member.from_user.username
     full_name = chat_member.from_user.full_name
     status = chat_member.new_chat_member.status
-    date = str(datetime.date.today())
+    date = datetime.date.today()
     db.add_event(chat_id, user_id, username,
                  full_name, status, date, subs_amount)
